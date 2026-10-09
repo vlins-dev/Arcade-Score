@@ -1,0 +1,25 @@
+div {
+    margin-top: 15vh;
+    margin-left: -217px;
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+
+}
+button {
+    color: #cecece;
+    background-color: rgb(41, 41, 41);
+    border: 2px solid rgb(252, 253, 252);
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    padding: 10px 20px;
+    &:hover {
+      background-color: rgb(55, 55, 55);
+    }
+    // Estado ativo (quando for clicado)
+    &.active {
+      color: #ffffff;
+    }
+}

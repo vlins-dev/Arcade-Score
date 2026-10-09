@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgb(55, 55, 55);
+    color: #cecece;
+    font-family: cursive;
+    h1{
+        text-align: center;
+        font-size: 4.75rem;
+        padding: 10px;
+        margin-left: 30vw;
+        margin-right: 30vw;
+    }    
+    .tela {
+        background-color: rgb(48, 48, 48);
+        border: 2px solid rgba(249, 248, 248, 0.329);
+        border-radius: 10px;
+        margin-left: 9vw;
+        margin-top: 1vh;
+        height: 30rem;
+        width: 40rem;
+        padding: 1px 10px;
+    }
+}

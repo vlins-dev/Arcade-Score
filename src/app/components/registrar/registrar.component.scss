@@ -1,0 +1,48 @@
+div {
+  h3 {
+    font-size: 30px;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(245, 247, 247, 0.815);
+  }
+  .campos {
+    padding: 3vh;
+    margin-top: 4vh;
+    label {
+      font-size: 20px;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+    input {
+      font-family: cursive;
+      background-color: rgba(219, 219, 219, 0.677);
+      border-color: #101010ae;
+      border-radius: 10px;
+      display: flex;
+      height: 2.5rem;
+      width: 22rem;
+      margin-top: -4vh;
+      margin-left: 15vw;
+      &:hover {
+        border-color: white;
+      }
+      &::placeholder {
+        color: black;
+      }
+    }
+  }
+  .salvar {
+    font-family: cursive;
+    background-color: rgba(219, 219, 219, 0.677);
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 10vh;
+    margin-left: 32.1vw;
+    &:hover {
+      border-color: white;
+    }
+  }
+}

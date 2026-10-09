@@ -1,0 +1,16 @@
+<div>
+    <button 
+        class="Rgt_Pt" 
+        [class.active]="botaoAtivo === 1"
+        (click)="botaoValido(1)"
+        (click)="trocarTag('registrar')">
+        Registrar Pontuação
+    </button>
+    <button 
+        class="Rkg" 
+        [class.active]="botaoAtivo === 2"
+        (click)="botaoValido(2)"
+        (click)="trocarTag('ranking')">
+        Ranking
+    </button>
+</div>
