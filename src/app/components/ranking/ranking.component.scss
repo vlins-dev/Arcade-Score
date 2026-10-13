@@ -1,69 +1,57 @@
-.cabeçalho {
-  background-color: rgb(48, 48, 48);
-  border: 2px solid rgba(249, 248, 248, 0.329);
-  border-radius: 10px;
-  margin-left: 9vw;
-  margin-top: 1vh;
-  height: 30rem;
-  width: 40rem;
-  padding: 1px 10px;
-  box-sizing: border-box;
+h3 {
+  font-size: 30px;
+}
 
-  h3 {
-    font-size: 30px;
-  }
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(245, 247, 247, 0.815);
+}
 
-  hr {
-    border: none;
-    height: 1px;
-    background-color: rgba(245, 247, 247, 0.815);
-  }
+.conteudo-ranking {
+  font-size: 4px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 22rem;
+  overflow-y: auto;
 
-  .conteudo-ranking {
-    font-size: 4px;
-    padding: 20px 30px;
+  .linha-ranking {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-height: 22rem;
-    overflow-y: auto;
+    align-items: center; // MUDADO DE baseline PARA center
+    font-size: 20px;
+    font-family: cursive;
+    color: #cecece;
 
-    .linha-ranking {
-      display: flex;
-      align-items: center; // MUDADO DE baseline PARA center
-      font-size: 20px;
-      font-family: cursive;
+    .posicao {
+      width: 30px;
+      color: #ffffff;
+    }
+
+    .nome {
       color: #cecece;
-
-      .posicao {
-        width: 30px;
-        color: #ffffff;
-      }
-
-      .nome {
-        color: #cecece;
-        margin-right: 10px;
-        cursor: pointer;
-      }
-
-      .linha-guia {
-        flex: 1;
-        border-bottom: 2px dashed rgba(206, 206, 206, 0.4);
-        margin: 4px 10px 0 10px; // MARGEM AJUSTADA PARA CENTRALIZAR VERTICALMENTE
-      }
-
-      .pontos {
-        color: #cecece;
-        white-space: nowrap;
-      }
+      margin-right: 10px;
+      cursor: pointer;
     }
 
-    .sem-registros {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 18px;
-      color: #888888;
-      font-family: cursive;
+    .linha-guia {
+      flex: 1;
+      border-bottom: 2px dashed rgba(206, 206, 206, 0.4);
+      margin: 4px 10px 0 10px; // MARGEM AJUSTADA PARA CENTRALIZAR VERTICALMENTE
     }
+
+    .pontos {
+      color: #cecece;
+      white-space: nowrap;
+    }
+  }
+
+  .sem-registros {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #888888;
+    font-family: cursive;
   }
 }
