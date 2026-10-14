@@ -1,92 +1,81 @@
-.cabeçalho {
-  background-color: rgb(48, 48, 48);
-  border: 2px solid rgba(249, 248, 248, 0.329);
-  border-radius: 10px;
-  margin-left: 9vw;
-  margin-top: 1vh;
-  height: 30rem;
-  width: 40rem;
-  padding: 1px 10px;
-  box-sizing: border-box;
+.header-detalhes {
+  display: flex;
+  justify-content: space-between;
+  height: 5.85rem;
 
-  .header-detalhes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  h3 {
+    font-size: 30px;
+  }
 
-    h3 {
-      font-size: 30px;
-      margin: 0;
+  .btn-fechar {
+    background: transparent;
+    border: none;
+    color: #cecece;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0 10px;
+
+    &:hover {
       color: #ffffff;
     }
-
-    .btn-fechar {
-      background: transparent;
-      border: none;
-      color: #cecece;
-      font-size: 22px;
-      cursor: pointer;
-      padding: 0 10px;
-
-      &:hover {
-        color: #ffffff;
-      }
-    }
   }
+}
 
-  hr {
-    border: none;
-    height: 1px;
-    background-color: rgba(245, 247, 247, 0.815);
-  }
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(245, 247, 247, 0.815);
+}
 
-  .conteudo-detalhes {
-    margin-top: 6vh;
-    padding: 15px 10px;
+.conteudo-detalhes {
+  margin-top: 2vh;
+  padding: 15px 10px;
 
-    .tabela-estatisticas {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: rgb(38, 38, 38); // Fundo cinza escuro
-      border: 1px solid rgba(255, 255, 255, 0.6); // Contorno externo branco
-      border-radius: 10px;
-      overflow: hidden;
-      font-family: cursive;
-      color: #cecece; // Texto em cinza claro
-
-      tr {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3); // Linhas/contornos internos brancos
-
-        &:last-child {
-          border-bottom: none;
-        }
-      }
-
-      td {
-        padding: 10px 15px;
-        font-size: 18px;
-      }
-
-      .rotulo {
-        text-align: left;
-        width: 75%;
-        color: #cecece;
-      }
-
-      .valor {
-        text-align: right;
-        font-weight: bold;
-        width: 25%;
-        color: #cecece; // Valores em destaque (branco)
-      }
-    }
-  }
-
-  .sem-registros {
-    font-size: 18px;
-    color: #cecece;
+  .tabela-estatisticas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(38, 38, 38); // Fundo cinza escuro
+    border: 1px solid rgba(255, 255, 255, 0.6); // Contorno externo branco
+    border-radius: 10px;
+    overflow: hidden;
     font-family: cursive;
-    margin-top: 10px;
-    padding-left: 10px;
+    color: #cecece; // Texto em cinza claro
+
+    tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); // Linhas/contornos internos brancos
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+
+    .rotulo {
+      text-align: left;
+      width: 75%;
+      color: #cecece;
+      white-space: nowrap;
+    }
+
+    .valor {
+      font-weight: bold;
+      width: 45%;
+      text-align: right;
+      color: #cecece;
+      white-space: nowrap;
+    }
   }
+}
+
+.sem-registros {
+  font-size: 18px;
+  color: #cecece;
+  font-family: cursive;
+  margin-top: 10px;
+  padding-left: 10px;
+
 }

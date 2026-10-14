@@ -10,48 +10,67 @@ hr {
 
 .conteudo-ranking {
   font-size: 4px;
-  padding: 20px 30px;
+  padding: 10px 15px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: 22rem;
+  max-height: 20rem;
   overflow-y: auto;
+  box-sizing: border-box;
 
-  .linha-ranking {
-    display: flex;
-    align-items: center; // MUDADO DE baseline PARA center
-    font-size: 20px;
-    font-family: cursive;
+  /* Estilização discreta da barra de rolagem (WebKit) */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.linha-ranking {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: cursive;
+  color: #cecece;
+
+  .posicao {
+    width: 30px;
+    color: #ffffff;
+  }
+
+  .nome {
     color: #cecece;
-
-    .posicao {
-      width: 30px;
-      color: #ffffff;
-    }
-
-    .nome {
-      color: #cecece;
-      margin-right: 10px;
-      cursor: pointer;
-    }
-
-    .linha-guia {
-      flex: 1;
-      border-bottom: 2px dashed rgba(206, 206, 206, 0.4);
-      margin: 4px 10px 0 10px; // MARGEM AJUSTADA PARA CENTRALIZAR VERTICALMENTE
-    }
-
-    .pontos {
-      color: #cecece;
-      white-space: nowrap;
-    }
+    margin-right: 10px;
+    cursor: pointer;
   }
 
-  .sem-registros {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 18px;
-    color: #888888;
-    font-family: cursive;
+  .linha-guia {
+    flex: 1;
+    border-bottom: 2px dashed rgba(206, 206, 206, 0.4);
+    margin: 4px 10px 0 10px;
   }
+
+  .pontos {
+    color: #cecece;
+    white-space: nowrap;
+  }
+}
+
+.sem-registros {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #888888;
+  font-family: cursive;
 }
