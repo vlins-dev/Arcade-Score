@@ -1,0 +1,41 @@
+<div class="tela">
+  <div class="header-detalhes">
+    <h3>Estatísticas Jogador - {{ estatisticas?.nomeFormatado || nomeJogador }}</h3>
+    <button class="btn-fechar" (click)="fechar()">✕</button>
+  </div>
+  <hr />
+
+  <div class="conteudo-detalhes" *ngIf="estatisticas">
+    <table class="tabela-estatisticas">
+      <tr>
+        <td class="rotulo">Partidas Jogadas</td>
+        <td class="valor">{{ estatisticas.partidasJogadas }}</td>
+      </tr>
+      <tr>
+        <td class="rotulo">Média de pontuação</td>
+        <td class="valor">{{ estatisticas.mediaPontuacao }}</td>
+      </tr>
+      <tr>
+        <td class="rotulo">Maior pontuação</td>
+        <td class="valor">{{ estatisticas.maiorPontuacao }}</td>
+      </tr>
+      <tr>
+        <td class="rotulo">Menor Pontuação</td>
+        <td class="valor">{{ estatisticas.menorPontuacao }}</td>
+      </tr>
+      <tr>
+        <td class="rotulo">Quantidade de quebra de recorde</td>
+        <td class="valor">{{ estatisticas.vezesBateuRecorde }}</td>
+      </tr>
+      <tr>
+        <td class="rotulo">Tempo que joga</td>
+        <td class="valor">{{ estatisticas.tempoQueJoga }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="sem-registros" *ngIf="!estatisticas">
+    Nenhum registro encontrado para este jogador.
+  </div>
+  
+</div>

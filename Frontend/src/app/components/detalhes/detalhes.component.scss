@@ -1,0 +1,81 @@
+.header-detalhes {
+  display: flex;
+  justify-content: space-between;
+  height: 5.85rem;
+
+  h3 {
+    font-size: 30px;
+  }
+
+  .btn-fechar {
+    background: transparent;
+    border: none;
+    color: #cecece;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0 10px;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(245, 247, 247, 0.815);
+}
+
+.conteudo-detalhes {
+  margin-top: 2vh;
+  padding: 15px 10px;
+
+  .tabela-estatisticas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(38, 38, 38); // Fundo cinza escuro
+    border: 1px solid rgba(255, 255, 255, 0.6); // Contorno externo branco
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: cursive;
+    color: #cecece; // Texto em cinza claro
+
+    tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); // Linhas/contornos internos brancos
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+
+    .rotulo {
+      text-align: left;
+      width: 75%;
+      color: #cecece;
+      white-space: nowrap;
+    }
+
+    .valor {
+      font-weight: bold;
+      width: 45%;
+      text-align: right;
+      color: #cecece;
+      white-space: nowrap;
+    }
+  }
+}
+
+.sem-registros {
+  font-size: 18px;
+  color: #cecece;
+  font-family: cursive;
+  margin-top: 10px;
+  padding-left: 10px;
+
+}

@@ -1,0 +1,17 @@
+<div class="tela">
+  <h3>Ranking - Maiores Pontuações</h3>
+  <hr />
+
+  <div class="conteudo-ranking">
+    <div *ngFor="let item of rankingList; let i = index" class="linha-ranking">
+      <span class="posicao">{{ i + 1 }}.</span>
+      <span class="nome" (click)="verDetalhes(item.jogador)">{{ item.jogador }}</span>
+      <span class="linha-guia"></span>
+      <span class="pontos">{{ item.maiorPontuacao }} pontos</span>
+    </div>
+
+    <div *ngIf="rankingList.length === 0" class="sem-registros">
+      Nenhum registro encontrado.
+    </div>
+  </div>
+</div>
