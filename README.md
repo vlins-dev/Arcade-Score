@@ -85,11 +85,11 @@ dotnet run
 A API será iniciada em:
 
 - http://localhost:5078
-- https://localhost:7128 (quando habilitado no profile de desenvolvimento)
+- [Front-End API](https://localhost:7128) (quando habilitado no profile de desenvolvimento)
 
 O Swagger pode ser acessado em:
 
-- http://localhost:5078/swagger
+- [Back-End API](http://localhost:5078/swagger)
 
 ### 2) Frontend
 
