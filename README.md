@@ -85,7 +85,7 @@ dotnet run
 A API será iniciada em:
 
 - http://localhost:5078
-- [Front-End API](https://localhost:7128) (quando habilitado no profile de desenvolvimento)
+- https://localhost:7128 (quando habilitado no profile de desenvolvimento)
 
 O Swagger pode ser acessado em:
 
@@ -102,7 +102,7 @@ npm start
 
 O app Angular será iniciado em:
 
-- http://localhost:4200
+- [Front-End API](http://localhost:4200)
 
 ## Endpoints da API
 
