@@ -1,0 +1,22 @@
+# .NET
+**/bin/
+**/obj/
+
+# Angular / Node.js
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.angular/cache/
+Frontend/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+.vs/
+.idea/
+*.user
+*.suo
+
+# Operating system
+.DS_Store
+Thumbs.db
