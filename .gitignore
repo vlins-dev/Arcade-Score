@@ -5,17 +5,36 @@
 # Angular / Node.js
 Frontend/node_modules/
 Frontend/dist/
+Frontend/tmp/
+Frontend/out-tsc/
+Frontend/bazel-out/
 Frontend/.angular/cache/
 Frontend/coverage/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+Frontend/npm-debug.log
+Frontend/yarn-error.log
+Frontend/.sass-cache/
+Frontend/connect.lock
+Frontend/libpeerconnection.log
+Frontend/testem.log
+Frontend/typings/
 
 # IDEs and editors
 .vs/
 .idea/
 *.user
 *.suo
+Frontend/**/.project
+Frontend/**/.classpath
+Frontend/**/.c9/
+Frontend/**/*.launch
+Frontend/**/.settings/
+Frontend/**/*.sublime-workspace
+Frontend/.vscode/*
+!Frontend/.vscode/settings.json
+!Frontend/.vscode/tasks.json
+!Frontend/.vscode/launch.json
+!Frontend/.vscode/extensions.json
+Frontend/.history/*
 
 # Operating system
 .DS_Store
