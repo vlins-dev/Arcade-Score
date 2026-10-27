@@ -3,20 +3,19 @@
 **/obj/
 
 # Angular / Node.js
-Frontend/node_modules/
+# Compiled output
 Frontend/dist/
 Frontend/tmp/
 Frontend/out-tsc/
 Frontend/bazel-out/
+
+# Node
+Frontend/node_modules/
 Frontend/.angular/cache/
 Frontend/coverage/
 Frontend/npm-debug.log
 Frontend/yarn-error.log
 Frontend/.sass-cache/
-Frontend/connect.lock
-Frontend/libpeerconnection.log
-Frontend/testem.log
-Frontend/typings/
 
 # IDEs and editors
 .vs/
@@ -36,6 +35,12 @@ Frontend/.vscode/*
 !Frontend/.vscode/extensions.json
 Frontend/.history/*
 
-# Operating system
+# Miscellaneous
+Frontend/connect.lock
+Frontend/libpeerconnection.log
+Frontend/testem.log
+Frontend/typings/
+
+# System files
 .DS_Store
 Thumbs.db
