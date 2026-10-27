@@ -1,4 +1,6 @@
 using Backend.Services;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Hosting.Server.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,5 +42,27 @@ app.UseCors("AllowAngularDev");
 app.UseAuthorization();
 
 app.MapControllers();
+
+if (app.Environment.IsDevelopment())
+{
+    app.Lifetime.ApplicationStarted.Register(() =>
+    {
+        var addresses = app.Services
+            .GetRequiredService<IServer>()
+            .Features.Get<IServerAddressesFeature>()?
+            .Addresses;
+
+        if (addresses is null || addresses.Count == 0)
+        {
+            app.Logger.LogWarning("Could not determine the server address for Swagger UI.");
+            return;
+        }
+
+        foreach (var address in addresses)
+        {
+            app.Logger.LogInformation("Swagger UI: {SwaggerUrl}", $"{address.TrimEnd('/')}/swagger");
+        }
+    });
+}
 
 app.Run();
