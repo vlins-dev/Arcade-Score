@@ -53,6 +53,9 @@ hr {
     color: #cecece;
     margin-right: 10px;
     cursor: pointer;
+    &:hover{
+      color: #ffffff;
+    }
   }
 
   .linha-guia {
