@@ -3,33 +3,37 @@
   <hr>
   <div class="campos">
     <label for="data">Data da Partida</label>
-    <input 
-      type="date" 
-      id="data" 
-      class="dtDef" 
-      [(ngModel)]="data" 
+    <input
+      type="date"
+      id="data"
+      class="dtDef"
+      max="9999-12-31"
+      [(ngModel)]="data"
       (keyup.enter)="campoPontos.focus()">
     <br>
 
     <label for="pontos">Pontuação</label>
-    <input 
+    <input
       #campoPontos
-      type="number" 
-      id="pontos" 
-      class="pt" 
-      placeholder="ex: 1234" 
-      [(ngModel)]="pontuacao" 
+      type="text"
+      id="pontos"
+      class="pt"
+      maxlength="3"
+      placeholder="ex: 999"
+      [(ngModel)]="pontuacao"
+      (keypress)="permitirApenasNumeros($event)"
       (keyup.enter)="campoJogador.focus()">
     <br>
 
     <label for="jogador">Jogador</label>
-    <input 
+    <input
       #campoJogador
-      type="text" 
-      id="jogador" 
-      class="nmJg" 
-      placeholder="ex: abcd" 
-      [(ngModel)]="jogador" 
+      type="text"
+      id="jogador"
+      class="nmJg"
+      maxlength="4"
+      placeholder="ex: abcd"
+      [(ngModel)]="jogador"
       (keyup.enter)="salvar()">
   </div>
   <button class="salvar" (click)="salvar()">Salvar</button>
