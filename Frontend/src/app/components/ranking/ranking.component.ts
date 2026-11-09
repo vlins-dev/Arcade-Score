@@ -8,7 +8,9 @@ import { ModosService } from '../../services/modos.service';
   styleUrls: ['./ranking.component.scss']
 })
 export class RankingComponent implements OnInit {
-  rankingList: Array<{ jogador: string; maiorPontuacao: number }> = [];
+  rankingList: Array<Score> = [];
+  jogadorSelecionadoMenu: Score | null = null;
+  menuPosicao = { x: 0, y: 0 };
 
   constructor(
     private scoreService: ScoreService,
@@ -22,10 +24,7 @@ export class RankingComponent implements OnInit {
   carregarRanking(): void {
     this.scoreService.obterRanking().subscribe({
       next: (dados: Score[]) => {
-        this.rankingList = dados.map((item: Score) => ({
-          jogador: item.jogador,
-          maiorPontuacao: item.pontos
-        }));
+        this.rankingList = dados;
       },
       error: (err: unknown) => {
         console.error('Erro ao carregar o ranking:', err);
@@ -33,8 +32,38 @@ export class RankingComponent implements OnInit {
     });
   }
 
-  verDetalhes(nomeJogador: string): void {
-    this.modosService.selecionarJogador(nomeJogador);
+  abrirMenuOpcoes(score: Score, event: MouseEvent): void {
+    event.stopPropagation();
+
+    if (this.jogadorSelecionadoMenu?.id === score.id) {
+      this.fecharMenu();
+      return;
+    }
+
+    const elemento = event.currentTarget as HTMLElement;
+    const rect = elemento.getBoundingClientRect();
+
+    // Posiciona logo à direita do nome do jogador
+    this.menuPosicao = {
+      x: rect.right + 8,
+      y: rect.top
+    };
+
+    this.jogadorSelecionadoMenu = score;
+  }
+
+  fecharMenu(): void {
+    this.jogadorSelecionadoMenu = null;
+  }
+
+  irParaDetalhes(jogador: string): void {
+    this.modosService.selecionarJogador(jogador);
     this.modosService.trocarTag('detalhes');
+    this.fecharMenu();
+  }
+
+  irParaEdicao(score: Score): void {
+    this.modosService.iniciarEdicao(score);
+    this.fecharMenu();
   }
 }

@@ -21,11 +21,62 @@ namespace Backend.Controllers
         {
             if (score == null)
             {
-                return BadRequest("Dados inválidos.");
+                return BadRequest(new { mensagem = "Dados inválidos." });
+            }
+
+            if (string.IsNullOrWhiteSpace(score.Jogador))
+            {
+                return BadRequest(new { mensagem = "O nome do jogador não pode ficar vazio." });
+            }
+
+            if (score.Pontos < 0)
+            {
+                return BadRequest(new { mensagem = "A pontuação não pode ser negativa." });
             }
 
             var novoScore = _scoreService.AdicionarPontuacao(score);
-            return CreatedAtAction(nameof(ObterEstatisticas), new { jogador = novoScore.Jogador }, novoScore);
+            return CreatedAtAction(nameof(ObterPorId), new { id = novoScore.Id }, novoScore);
+        }
+
+        // GET: api/scores/{id} -> Obter pontuação por ID
+        [HttpGet("{id:int}")]
+        public ActionResult<Score> ObterPorId(int id)
+        {
+            var score = _scoreService.ObterPorId(id);
+            if (score == null)
+            {
+                return NotFound(new { mensagem = "Registo não encontrado." });
+            }
+
+            return Ok(score);
+        }
+
+        // PUT: api/scores/{id} -> Editar pontuação existente
+        [HttpPut("{id:int}")]
+        public IActionResult AtualizarPontuacao(int id, [FromBody] Score score)
+        {
+            if (score == null)
+            {
+                return BadRequest(new { mensagem = "Dados inválidos." });
+            }
+
+            if (string.IsNullOrWhiteSpace(score.Jogador))
+            {
+                return BadRequest(new { mensagem = "O nome do jogador não pode ficar vazio." });
+            }
+
+            if (score.Pontos < 0)
+            {
+                return BadRequest(new { mensagem = "A pontuação não pode ser negativa." });
+            }
+
+            var scoreAtualizado = _scoreService.AtualizarPontuacao(id, score);
+            if (scoreAtualizado == null)
+            {
+                return NotFound(new { mensagem = $"Não foi possível encontrar o registo com o ID {id}." });
+            }
+
+            return Ok(scoreAtualizado);
         }
 
         // GET: api/scores/ranking -> Obter o ranking dos Top 10
@@ -44,7 +95,7 @@ namespace Backend.Controllers
 
             if (estatisticas == null)
             {
-                return NotFound($"Nenhuma pontuação encontrada para o jogador '{jogador}'.");
+                return NotFound(new { mensagem = $"Nenhuma pontuação encontrada para o jogador '{jogador}'." });
             }
 
             return Ok(estatisticas);

@@ -32,6 +32,14 @@ export class ScoreService {
     return this.http.post<Score>(this.apiUrl, score);
   }
 
+  atualizarPontuacao(id: number, score: Score): Observable<Score> {
+    return this.http.put<Score>(`${this.apiUrl}/${id}`, score);
+  }
+
+  obterPorId(id: number): Observable<Score> {
+    return this.http.get<Score>(`${this.apiUrl}/${id}`);
+  }
+
   obterRanking(): Observable<Score[]> {
     return this.http.get<Score[]>(`${this.apiUrl}/ranking`);
   }

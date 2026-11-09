@@ -23,12 +23,12 @@
 
 hr {
   border: none;
-  height: 1px;
+  height: 0.5px;
   background-color: rgba(245, 247, 247, 0.815);
 }
 
 .conteudo-detalhes {
-  margin-top: 2vh;
+  margin-top: -2vh;
   padding: 15px 10px;
 
   .tabela-estatisticas {

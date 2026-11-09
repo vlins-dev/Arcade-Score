@@ -1,6 +1,10 @@
 <div class="tela">
-  <h3>Registrar Pontuação</h3>
-  <hr>
+  <div class="header-detalhes">
+    <h3>{{ modoEdicao ? 'Editar Pontuação' : 'Registrar Pontuação' }}</h3>
+    <button *ngIf="modoEdicao" class="btn-fechar" (click)="cancelar()">✕</button>
+  </div>
+  <hr />
+
   <div class="campos">
     <label for="data">Data da Partida</label>
     <input
@@ -9,7 +13,8 @@
       class="dtDef"
       max="9999-12-31"
       [(ngModel)]="data"
-      (keyup.enter)="campoPontos.focus()">
+      (keyup.enter)="campoPontos.focus()"
+    >
     <br>
 
     <label for="pontos">Pontuação</label>
@@ -22,7 +27,8 @@
       placeholder="ex: 999"
       [(ngModel)]="pontuacao"
       (keypress)="permitirApenasNumeros($event)"
-      (keyup.enter)="campoJogador.focus()">
+      (keyup.enter)="campoJogador.focus()"
+    >
     <br>
 
     <label for="jogador">Jogador</label>
@@ -34,7 +40,11 @@
       maxlength="4"
       placeholder="ex: abcd"
       [(ngModel)]="jogador"
-      (keyup.enter)="salvar()">
+      (keyup.enter)="salvar()"
+    >
   </div>
-  <button class="salvar" (click)="salvar()">Salvar</button>
+
+  <button class="salvar" (click)="salvar()">
+    {{ modoEdicao ? 'Atualizar' : 'Salvar' }}
+  </button>
 </div>
