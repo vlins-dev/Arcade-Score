@@ -1,19 +1,13 @@
 .header-detalhes {
   display: flex;
   justify-content: space-between;
-  height: 5.85rem;
-
-  h3 {
-    font-size: 30px;
-  }
 
   .btn-fechar {
     background: transparent;
     border: none;
     color: #cecece;
-    font-size: 22px;
+    font-size: 1.5rem;
     cursor: pointer;
-    padding: 0 10px;
 
     &:hover {
       color: #ffffff;
@@ -21,15 +15,13 @@
   }
 }
 
-hr {
-  border: none;
-  height: 0.5px;
-  background-color: rgba(245, 247, 247, 0.815);
+hr{
+  margin: 0rem auto 0.6rem auto;
 }
 
 .conteudo-detalhes {
-  margin-top: -2vh;
-  padding: 15px 10px;
+  //margin-top: -2vh;
+  padding: 0.25rem 1rem;
 
   .tabela-estatisticas {
     width: 100%;
@@ -50,8 +42,8 @@ hr {
     }
 
     td {
-      padding: 10px 15px;
-      font-size: 18px;
+      padding: 0.65rem 0.9rem;
+      font-size: 1.15rem;
     }
 
     .rotulo {
@@ -72,10 +64,9 @@ hr {
 }
 
 .sem-registros {
-  font-size: 18px;
-  color: #cecece;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  color: #888888;
   font-family: cursive;
-  margin-top: 10px;
-  padding-left: 10px;
-
 }

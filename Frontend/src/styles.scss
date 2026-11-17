@@ -7,21 +7,28 @@ body {
 h1 {
   text-align: center;
   font-size: 4.5rem;
-  //padding: 10px;
-  margin-left: 25.25vw;
+  margin-left: 20rem;
 }
 
 .tela {
   background-color: rgb(48, 48, 48);
   border: 2px solid rgba(249, 248, 248, 0.329);
   border-radius: 10px;
-  margin-left: 8vw;
-  margin-top: -6vh;
+  margin-left: -3rem;
+  margin-top: -2rem;
   height: 26rem;
   width: 40rem;
-  padding: 15px 20px;
+  padding: 0rem 1.25rem;
   box-sizing: border-box;
   overflow: hidden; /* Evita que o conteúdo da lista ultrapasse as bordas arredondadas do card */
+  h3 {
+    font-size: 2rem;
+  }
+  hr {
+    border: none;
+    height: 0.5px;
+    background-color: rgba(245, 247, 247, 0.815);
+  }
 }
 
 // Estilização das tags hospedeiras dos componentes no nível raiz do SCSS

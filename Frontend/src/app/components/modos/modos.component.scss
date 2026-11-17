@@ -1,9 +1,8 @@
 div {
-    margin-top: 15vh;
-    margin-left: -217px;
-    margin-right: 70px;
-    display: flex;
-    flex-direction: column;
+  //background-color: rgb(216, 59, 59);
+  margin: 5rem 15rem auto -30rem;
+  display: flex;
+  flex-direction: column;
 
 }
 button {
@@ -13,8 +12,8 @@ button {
     border-radius: 10px;
     font-family: cursive;
     font-size: 1.2rem;
-    margin-bottom: 6vh;
-    padding: 20px 30px;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
     &:hover {
       background-color: rgb(55, 55, 55);
     }

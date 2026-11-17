@@ -1,27 +1,16 @@
-h3 {
-  font-size: 30px;
-}
-
-hr {
-  border: none;
-  margin-top: -1px;
-  height: 0.5px;
-  background-color: rgba(245, 247, 247, 0.815);
-}
-
 .conteudo-ranking {
-  font-size: 4px;
-  padding: 10px 15px;
+  font-size: 1.25rem;
+  padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-height: 20rem;
+  gap: 1.4rem;
+  max-height: 19rem;
   overflow-y: auto;
   box-sizing: border-box;
 
   /* Estilização discreta da barra de rolagem (WebKit) */
   &::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
 
   &::-webkit-scrollbar-track {
@@ -30,7 +19,7 @@ hr {
 
   &::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    border-radius: 2px;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.4);
@@ -41,18 +30,16 @@ hr {
 .linha-ranking {
   display: flex;
   align-items: center;
-  font-size: 20px;
   font-family: cursive;
   color: #cecece;
 
   .posicao {
-    width: 30px;
     color: #ffffff;
+    margin-right: 1rem;
   }
 
   .nome {
     color: #cecece;
-    margin-right: 10px;
     cursor: pointer;
 
     &:hover {
@@ -62,8 +49,8 @@ hr {
 
   .linha-guia {
     flex: 1;
+    margin: auto 1rem;
     border-bottom: 2px dashed rgba(206, 206, 206, 0.4);
-    margin: 4px 10px 0 10px;
   }
 
   .pontos {
@@ -74,8 +61,8 @@ hr {
 
 .sem-registros {
   text-align: center;
-  margin-top: 50px;
-  font-size: 18px;
+  margin-top: 2rem;
+  font-size: 1.25rem;
   color: #888888;
   font-family: cursive;
 }
@@ -90,7 +77,7 @@ hr {
   border: 1.5px solid #777777;
   border-radius: 6px;
   //box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-  min-width: 100px;
+  min-width: 7rem;
   overflow: hidden;
 
   .btn-opcao {
@@ -98,13 +85,11 @@ hr {
     border: none;
     color: #ffffff;
     font-family: cursive;
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 7px 14px;
+    font-size: 0.88rem;
+    line-height: 2.5rem;
     text-align: center;
     cursor: pointer;
     display: block;
-    width: 100%;
     box-sizing: border-box;
     transition: background-color 0.2s;
 

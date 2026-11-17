@@ -1,19 +1,13 @@
 .header-detalhes {
   display: flex;
   justify-content: space-between;
-  height: 5.85rem;
-
-  h3 {
-    font-size: 30px;
-  }
 
   .btn-fechar {
     background: transparent;
     border: none;
     color: #cecece;
-    font-size: 22px;
+    font-size: 1.5rem;
     cursor: pointer;
-    padding: 0 10px;
 
     &:hover {
       color: #ffffff;
@@ -21,18 +15,12 @@
   }
 }
 
-hr {
-  border: none;
-  height: 0.5px;
-  background-color: rgba(245, 247, 247, 0.815);
+hr{
+  margin: 0rem auto 1.25rem auto;
 }
-
 .campos {
-  padding: 3vh;
-  margin-top: 1vh;
-
   label {
-    font-size: 23px;
+    font-size: 1.4rem;
     &:hover {
       color: #ffffff;
     }
@@ -40,8 +28,8 @@ hr {
 
   input {
     font-family: cursive;
-    font-size: 18px;
-    padding: 0 14px;
+    font-size: 1.1rem;
+    padding: 0 1rem;
     background-color: rgba(219, 219, 219, 0.677);
     border-color: #101010ae;
     border-radius: 10px;
@@ -49,8 +37,7 @@ hr {
     height: 3.2rem;
     width: 22.5rem;
     box-sizing: border-box;
-    margin-top: -6vh;
-    margin-left: 17vw;
+    margin: -2rem 14.75rem 0.5rem;
 
     &:hover {
       border-color: white;
@@ -64,11 +51,11 @@ hr {
 
 .salvar {
   font-family: cursive;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: rgba(219, 219, 219, 0.677);
   border-radius: 10px;
-  padding: 10px 24px;
-  margin-top: -1vh;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.75rem;
   display: flex;
   margin-left: auto;
   cursor: pointer;
