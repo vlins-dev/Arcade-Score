@@ -1,24 +1,36 @@
 div {
-  //background-color: rgb(216, 59, 59);
   margin: 5rem 15rem auto -30rem;
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 1000px) {
+    margin: 0;
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
+
 button {
-    color: #cecece;
-    background-color: rgb(41, 41, 41);
-    border: 2px solid rgb(252, 253, 252);
-    border-radius: 10px;
-    font-family: cursive;
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-    padding: 1rem;
-    &:hover {
-      background-color: rgb(55, 55, 55);
-    }
-    // Estado ativo (quando for clicado)
-    &.active {
-      color: #ffffff;
-    }
+  color: #cecece;
+  background-color: rgb(41, 41, 41);
+  border: 2px solid rgb(252, 253, 252);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:hover { 
+    background-color: rgb(55, 55, 55); 
+  }
+  
+  &.active { 
+    color: #ffffff; 
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 0;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
 }

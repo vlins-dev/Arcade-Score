@@ -1,6 +1,7 @@
 .header-detalhes {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .btn-fechar {
     background: transparent;
@@ -15,19 +16,34 @@
   }
 }
 
-hr{
+hr {
   margin: 0rem auto 1.25rem auto;
+
+  @media (max-width: 1000px) {
+    margin: 0.25rem auto 0.75rem auto;
+  }
 }
+
 .campos {
+  br {
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
   label {
     font-size: 1.4rem;
+
     &:hover {
       color: #ffffff;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 1.15rem;
     }
   }
 
   input {
-    font-family: cursive;
     font-size: 1.1rem;
     padding: 0 1rem;
     background-color: rgba(219, 219, 219, 0.677);
@@ -46,11 +62,17 @@ hr{
     &::placeholder {
       color: black;
     }
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      height: 2.5rem;
+      font-size: 1rem;
+      margin: 0.25rem 0 0.75rem 0;
+    }
   }
 }
 
 .salvar {
-  font-family: cursive;
   font-size: 1.25rem;
   background-color: rgba(219, 219, 219, 0.677);
   border-radius: 10px;
@@ -62,5 +84,12 @@ hr{
 
   &:hover {
     border-color: white;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.15rem;
+    margin: auto 0 0.5rem 0;
   }
 }

@@ -1,14 +1,30 @@
-div{
+div {
   display: flex;
   flex-direction: column;
-    .logo{
-        border-radius: 50px;
-        width: 6rem;
-        height: 6rem;
-        margin: -8rem 4rem
+
+  @media (max-width: 1000px) {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    border-radius: 50px;
+    width: 6rem;
+    height: 6rem;
+    margin: -8rem 4rem;
+
+    @media (max-width: 1000px) {
+      margin: 0;
     }
-    h2{
-        font-size: 3.75rem;
-        margin: 2rem 12rem;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+    margin: 2rem 12rem;
+
+    @media (max-width: 1000px) {
+      margin: 0;
+      font-size: 2.5rem;
     }
+  }
 }

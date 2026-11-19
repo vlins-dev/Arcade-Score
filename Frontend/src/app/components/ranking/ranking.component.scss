@@ -8,6 +8,12 @@
   overflow-y: auto;
   box-sizing: border-box;
 
+  @media (max-width: 1000px) {
+    flex: 1;
+    max-height: none;
+    padding: 0.75rem 1rem 0 1rem;
+  }
+
   /* Estilização discreta da barra de rolagem (WebKit) */
   &::-webkit-scrollbar {
     width: 4px;
@@ -30,7 +36,6 @@
 .linha-ranking {
   display: flex;
   align-items: center;
-  font-family: cursive;
   color: #cecece;
 
   .posicao {
@@ -64,7 +69,6 @@
   margin-top: 2rem;
   font-size: 1.25rem;
   color: #888888;
-  font-family: cursive;
 }
 
 /* Menu popover independente do container com overflow */
@@ -84,8 +88,7 @@
     background: transparent;
     border: none;
     color: #ffffff;
-    font-family: cursive;
-    font-size: 0.88rem;
+    font-size: 0.98rem;
     line-height: 2.5rem;
     text-align: center;
     cursor: pointer;

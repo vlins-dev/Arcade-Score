@@ -1,39 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
 body {
   background-color: rgb(55, 55, 55);
   color: #cecece;
-  font-family: cursive;
+  font-family: 'Comic Neue', cursive;
 }
 
 h1 {
   text-align: center;
   font-size: 4.5rem;
-  margin-left: 20rem;
+  margin-top: 0rem;
+  margin-left: 20rem; /* O seu valor original */
+
+  @media (max-width: 1000px) {
+    margin-left: 0;
+    font-size: 2.5rem;
+  }
 }
 
 .tela {
   background-color: rgb(48, 48, 48);
   border: 2px solid rgba(249, 248, 248, 0.329);
   border-radius: 10px;
-  margin-left: -3rem;
-  margin-top: -2rem;
-  height: 26rem;
-  width: 40rem;
+  margin-left: -3rem; /* O seu valor original */
+  margin-top: -2rem;  /* O seu valor original */
+  height: 26rem;      /* O seu valor original */
+  width: 40rem;       /* O seu valor original */
   padding: 0rem 1.25rem;
   box-sizing: border-box;
-  overflow: hidden; /* Evita que o conteúdo da lista ultrapasse as bordas arredondadas do card */
-  h3 {
-    font-size: 2rem;
-  }
-  hr {
-    border: none;
-    height: 0.5px;
-    background-color: rgba(245, 247, 247, 0.815);
+  overflow: hidden;
+
+  h3 { font-size: 2rem; }
+  hr { border: none; height: 0.5px; background-color: rgba(245, 247, 247, 0.815); }
+
+  @media (max-width: 1000px) {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 27rem;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    hr {
+      width: 100%;
+    }
   }
 }
 
-// Estilização das tags hospedeiras dos componentes no nível raiz do SCSS
-app-registrar,
-app-ranking,
-app-detalhes {
+app-registrar, app-ranking, app-detalhes {
   display: block;
+
+  @media (max-width: 1000px) {
+    width: 92%;
+    max-width: 26rem;
+  }
 }
